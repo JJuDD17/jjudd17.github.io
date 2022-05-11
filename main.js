@@ -21,7 +21,7 @@ function generateClassSliders() {
         newSlider.max = 2000,
         newSlider.value = 0,
         newSlider.id = "slider_" + i.toString()
-        newSlider.addEventListener("change", generateImage)
+        newSlider.addEventListener("pointermove", generateImage)
         sliders.push(newSlider)
         container.appendChild(document.createElement('br'))
     }
