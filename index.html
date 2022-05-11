@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.0.0/dist/tf.min.js"></script>
-    <script async src="/main.js">model = await loadModel()</script>
+    <script async src="/main.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <button id='enter-button'>Enter</button>
+    <canvas id='img-canvas' width="84" height="84"></canvas>
     <br>
-    <canvas id='img-canvas' width="28" height="28"></canvas>
+    <input type="radio" name="draw-color" id="draw-color-positive" value="1" checked>
+    <label for="draw-color-positive" style="color: blue">+</label>
+    <br>
+    <input type="radio" name="draw-color" id="draw-color-negative" value="-1">
+    <label for="draw-color-negative" style="color: red">-</label>
+    <br>
+    <canvas id="latent-vector-canvas"></canvas>
+    <br>
+    <button id="randomize-latent-btn">Randomize latent vector</button>
     <br>
     <div id="classSlidersContainer">
     </div>
